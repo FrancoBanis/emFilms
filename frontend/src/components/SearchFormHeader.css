@@ -1,0 +1,28 @@
+.search-form-header {
+    display: flex;
+    flex-grow: 0.8;
+    margin: 0 20px;
+    border-radius: 2px ;
+    border: var(--border) 2px solid;
+}
+.header-search-bar {
+    flex-grow: 1;
+    background-color: transparent;
+    color: var(--text);
+    border: 0;
+}
+.btn-selecter {
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    padding: 0 20px;
+    font-size: 15px;
+}
+
+.btn-search {
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    padding: 0 20px;
+    font-size: 15px;
+}

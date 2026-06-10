@@ -1,0 +1,25 @@
+.news-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    width: 500px;
+    height: 300px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 15px;
+    border-color: var(--border);
+}
+.news-container:-webkit-scrollbar {
+    display:none;   
+}
+.news-list {
+    list-style: none;
+}
+.news-title {
+    border-left: 2px solid var(--gold);
+    padding: 15px;
+    margin-left: 15px;
+}

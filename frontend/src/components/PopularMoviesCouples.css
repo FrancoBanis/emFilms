@@ -1,0 +1,13 @@
+.popular-movies-couples{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 800px;
+    list-style: none;
+    overflow-y: scroll;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 15px;
+    border-color: var(--border);
+}

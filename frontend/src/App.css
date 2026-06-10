@@ -1,0 +1,21 @@
+:root {
+  --bg:    #141414;   /* fondo principal */
+  --bg2:   #1E1E1E;   /* fondo de cards, hover */
+  --bg3:   #282828;   /* elementos internos, search */
+  --red:   #B91C1C;   /* rojo principal: nav border, botón Sign In */
+  --gold:  #C9A84C;   /* dorado: estrellas ★, hover de títulos */
+  --text:  #E8E8E8;   /* texto principal */
+  --muted: #888888;   /* texto secundario, placeholders */
+  --border:#333333;   /* líneas divisoras */
+}
+body {
+    background-color: var(--bg);
+    margin: 0 ;
+    color: var(--text);
+}
+h1,h2,h3,button,form,span {
+  font-family: 'Oswald', sans-serif;
+}
+p{
+  font-family: 'Source Serif 4', serif;
+}

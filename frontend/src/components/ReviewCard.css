@@ -1,0 +1,24 @@
+
+.review-card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content:center;
+    border: 10px solid black;
+    background-color: rgba(243, 162, 32, 0.249);
+    border-color: rgba(0, 0, 0, 0.249);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 300px;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: rgba(243, 162, 32, 0.249);
+    border-color: rgba(0, 0, 0, 0.249);
+}
