@@ -26,7 +26,7 @@ public class UserService {
                 dto.getEmail(),
                 dto.getPassword()
         );
-        newUser.setPassword(passwordEncoder.encode(newUser.getPassword()));
+        newUser.setPassWord(passwordEncoder.encode(newUser.getPassWord()));
         return accessRepositoryUser.save(newUser);
     }
     public void delete(User u){

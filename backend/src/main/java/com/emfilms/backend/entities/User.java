@@ -14,13 +14,13 @@ public class User {
     private Long idUser;
     private String userName;
     private String email;
-    private String password;
+    private String passWord;
 
 
-    public User(String userName, String email, String password) {
+    public User(String userName, String email, String passWord) {
         this.userName = userName;
         this.email = email;
-        this.password = password;
+        this.passWord = passWord;
     }
 
     public Long getIdUser() {
@@ -44,12 +44,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
 }

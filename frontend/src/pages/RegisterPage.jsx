@@ -1,5 +1,5 @@
 import './AuthPage.css'
-import CreateAccountForm from '../components/CreateAccountForm'
+import {CreateAccountForm} from '../components/Register'
 function RegisterPage () {
     return (
         <>
