@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 public class UserRegistrationDTO {
     @NotBlank (message = "Required field.")
     @Size(min = 4, max = 30, message = "Username must have 4 characters and 30 characters max")
-    private String userName;
+    private String nickName;
     @NotBlank(message = "Required field.")
     @Email
     private String email;
@@ -17,15 +17,15 @@ public class UserRegistrationDTO {
     public UserRegistrationDTO(){
 
     };
-    public UserRegistrationDTO(String userName, String email, String password, String confirmPassword) {
-        this.userName = userName;
+    public UserRegistrationDTO(String nickName, String email, String password, String confirmPassword) {
+        this.nickName = nickName;
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getNickName() {
+        return nickName;
     }
 
     public String getEmail() {
@@ -40,8 +40,8 @@ public class UserRegistrationDTO {
         return confirmPassword;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public void setEmail(String email) {

@@ -1,4 +1,4 @@
 package com.emfilms.backend.dto;
 
-public class AuthResponseDTO {
+public record AuthResponseDTO(String token , String nickName , String email) {
 }

@@ -1,26 +1,29 @@
 package com.emfilms.backend.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-@Table(name="users")
+import java.util.Collection;
+import java.util.List;
+
+@Table(name="cinephiles")
 @Entity
-public class User {
+public class Cinephile implements UserDetails {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUser;
-    private String userName;
+    private String nickName;
+    @Column(unique = true, nullable = false)
     private String email;
-    private String passWord;
+    private String password;
 
-
-    public User(String userName, String email, String passWord) {
-        this.userName = userName;
+    protected Cinephile() {};
+    public Cinephile(String nickName, String email, String password) {
+        this.nickName = nickName;
         this.email = email;
-        this.passWord = passWord;
+        this.password = password;
     }
 
     public Long getIdUser() {
@@ -28,12 +31,12 @@ public class User {
     }
 
 
-    public String getUserName() {
-        return userName;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getEmail() {
@@ -44,12 +47,23 @@ public class User {
         this.email = email;
     }
 
-    public String getPassWord() {
-        return passWord;
+    @Override
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String passWord) {
+        this.password = passWord;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+
+    @Override
+    public String getUsername() {
+        return this.email;
+    }
 }
