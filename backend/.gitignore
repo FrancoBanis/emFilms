@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Backend properties files ##
+.env
+application-local.properties
