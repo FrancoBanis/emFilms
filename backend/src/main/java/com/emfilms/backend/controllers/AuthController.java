@@ -6,19 +6,19 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.emfilms.backend.services.UserService;
+import com.emfilms.backend.services.CinephileService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/auth")
 @CrossOrigin(origins = AppSettings.URL_CROSS_ORIGIN)
-public class UserController{
+public class CinephileController {
     @Autowired
-    private UserService userService;
+    private CinephileService cinephileService;
 
     @PostMapping("/register")
     @ResponseBody
     public ResponseEntity<String> newUserRegistration(@RequestBody @Valid UserRegistrationDTO userDTO){
-        userService.save(userDTO);
+        cinephileService.save(userDTO);
         return ResponseEntity.ok("Succesfully register operation.");
     }
 

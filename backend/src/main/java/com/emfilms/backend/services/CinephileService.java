@@ -2,7 +2,7 @@ package com.emfilms.backend.services;
 
 
 import com.emfilms.backend.dto.UserRegistrationDTO;
-import com.emfilms.backend.entities.User;
+import com.emfilms.backend.entities.Cinephile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,30 +16,30 @@ public class UserService {
     UserRepository accessRepositoryUser;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    public User save(UserRegistrationDTO dto) {
+    public Cinephile save(UserRegistrationDTO dto) {
 
         if (!password_equal(dto)) {
             throw new IllegalArgumentException("Password don't match.");
         }
-        User newUser = new User(
+        Cinephile newCinephile = new Cinephile(
                 dto.getUserName(),
                 dto.getEmail(),
                 dto.getPassword()
         );
-        newUser.setPassWord(passwordEncoder.encode(newUser.getPassWord()));
-        return accessRepositoryUser.save(newUser);
+        newCinephile.setPassWord(passwordEncoder.encode(newCinephile.getPassWord()));
+        return accessRepositoryUser.save(newCinephile);
     }
-    public void delete(User u){
+    public void delete(Cinephile u){
         accessRepositoryUser.delete(u);
     }
 
-    public User edit(User u) {
+    public Cinephile edit(Cinephile u) {
         return accessRepositoryUser.save(u);
     }
-    public User findById(Long id) {
+    public Cinephile findById(Long id) {
         return accessRepositoryUser.findById(id).orElse(null);
     }
-    public List<User> findAll() {
+    public List<Cinephile> findAll() {
         return accessRepositoryUser.findAll();
     }
     private boolean password_equal(UserRegistrationDTO dto) {
